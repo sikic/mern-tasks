@@ -1,0 +1,17 @@
+La idea de mezclar node con react consiste en que crees dos carpetas, una para el cliente y otra para el servidor.
+
+En la del cliente creas una app con react y en la de servidor creaS UN PROYECTO con npm init, en el servidor vas a crear tu app.js
+tu express, los router y los controller, tambien se va a encargar de llevar la creacion de los modelos de la base de datos y sera quien 
+atienda a las llamadas a las rutas (todo lo normal de node).
+
+Desde el cliente lo que haras sera usar react context, reactReducer,reactState para organizar este lado.El funcionamiento es el siguiente:
+-En el context solo se crea lo que es el context.
+
+-En el State se ponen todas las funciones(se encargaran de llamar al dispacth con el tipo correspondiente y el payload en caso de ser necesario )
+,se hara uso del context, variables y el State, lo que quieras compartir lo vas a mandar a traves del value de Context.Provider.
+
+-Y el Reducer es como una especie de controlador, le van a llegar una serie de tipos y en funcion de lo que llegue se hara una cosa u otra
+
+-Si quieres utilizar las funciones y variables lo que tienes que hacer es importar el State en el app.js y usarlo a modo de contenedor,
+envolviendo a aquellos componentes que quieras que puedan tener opcion a acceder,luego de eso tendras que ir al componente en cuestion y 
+importar el context , usar la funcion useContext pasandole el context que has importado y extraer las funciones o variables que necesites1
