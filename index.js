@@ -13,7 +13,7 @@ conectarDb();
 //habilitar cors
 app.use(cors());
 //puerto de la app 
-const PORT = process.env.PORT || 4000;
+const port = process.env.port || 4000;
 
 //importar el router usuarios
 app.use('/api/usuarios',require('./routes/usuarios'));
@@ -30,6 +30,6 @@ app.get('/',(req,res)=>{
 });
 
 //arrancar el servidor
-app.listen(PORT,() =>{
+app.listen(port, '0.0.0.0', () =>{
     console.log("El servidor esta arrancando en el puerto " + PORT);
 })

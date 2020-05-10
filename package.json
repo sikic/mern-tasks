@@ -4,7 +4,7 @@
   "description": "servidor para la app de mern",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
+    "start": "nodemon index.js",
     "dev": "nodemon ."
   
   },
